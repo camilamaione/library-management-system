@@ -16,3 +16,5 @@ GUI: JavaFX 11 with MVC as architetural pattern
 Database connectivity: JDBC for MySQL
 
 Design patterns used: Data Access Objects, Factory (for creating data access objects) and Observer (for notifications between views)
+
+Software fully documented in Javadoc.
