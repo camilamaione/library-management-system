@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginScreenController">
+   <children>
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/tea.png" />
+               </image>
+            </ImageView>
+            <Text fill="#6f6f6f" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Library Management System!">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#6f6f6f" strokeType="OUTSIDE" strokeWidth="0.0" text="Please login to proceed.">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Text>
+            <GridPane maxWidth="-Infinity" minHeight="-Infinity" prefWidth="300.0" VBox.vgrow="NEVER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Email:" />
+                  <Label text="Password:" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtFieldUsername" text="sebastian@gmail.com" GridPane.columnIndex="1" />
+                  <PasswordField fx:id="txtFieldPassword" text="666" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="40.0" />
+               </VBox.margin>
+            </GridPane>
+            <HBox alignment="CENTER" VBox.vgrow="NEVER">
+               <children>
+                <Button fx:id="btLogin" mnemonicParsing="false" onAction="#onBtLoginAction" text="Login" HBox.hgrow="NEVER">
+                     <graphic>
+                        <FontIcon iconLiteral="eli-arrow-right" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="btExit" mnemonicParsing="false" onAction="#onBtExitAction" text="Exit" HBox.hgrow="NEVER">
+                     <graphic>
+                        <FontIcon iconLiteral="eli-off" />
+                     </graphic></Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

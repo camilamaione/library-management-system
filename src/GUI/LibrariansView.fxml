@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LibrariansViewController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <FontIcon fx:id="fontIconAddLibrarian" iconColor="#817d32" iconLiteral="fa-user-plus" iconSize="25" layoutY="18.0" onMouseClicked="#onAddLibrarianIconClicked" AnchorPane.rightAnchor="0.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <TableView fx:id="tableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnID" prefWidth="35.0" text="ID" />
+                              <TableColumn fx:id="tableColumnName" prefWidth="144.0" text="Name" />
+                              <TableColumn fx:id="tableColumnEmail" prefWidth="126.0" text="Email" />
+                              <TableColumn fx:id="tableColumnAddress" prefWidth="112.0" text="Address" />
+                              <TableColumn fx:id="tableColumnCity" prefWidth="81.0" text="City" />
+                              <TableColumn fx:id="tableColumnContact" text="Contact" />
+                              <TableColumn fx:id="tableColumnEdit" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" resizable="false" />
+                              <TableColumn fx:id="tableColumnRemove" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" resizable="false" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

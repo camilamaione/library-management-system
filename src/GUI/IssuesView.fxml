@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.IssuesViewController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Find by:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboBoxFindBy" prefWidth="100.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="txtFieldFindBy" onKeyPressed="#onFontIconFindByClicked" prefHeight="25.0" prefWidth="85.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <FontIcon fx:id="fontIconFindBy" iconColor="#817d32" iconLiteral="fa-search" iconSize="17" onMouseClicked="#onFontIconFindByClicked">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TableView fx:id="tableView" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnID" prefWidth="35.0" text="ID" />
+                              <TableColumn fx:id="tableColumnBookTitle" prefWidth="160.0" text="Book Title" />
+                              <TableColumn fx:id="tableColumnName" prefWidth="140.0" text="Name" />
+                              <TableColumn fx:id="tableColumnEmail" prefWidth="140.0" text="E-mail" />
+                              <TableColumn fx:id="tableColumnContact" text="Contact" />
+                              <TableColumn fx:id="tableColumnIssueDate" text="Issue date" />
+                              <TableColumn fx:id="tableColumnReturn" maxWidth="38.0" minWidth="22.0" prefWidth="26.0" resizable="false" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
